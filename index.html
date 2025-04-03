@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MELLO DESIGN</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<header class="sticky">
+<div class="container">
+<h1 class="brand">
+<a href="#">
+<span class="logo-text">MELLO DESIGN</span>
+</a>
+</h1>
+<nav>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#planes">Planes</a></li>
+<li><a href="#testimonios">Testimonios</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero animate" id="inicio">
+<h2>Tu presencia online comienza con una web profesional</h2>
+<p>Diseñamos sitios modernos, rápidos y adaptados para todo tipo de negocios.</p>
+</section>
+<section class="animate" id="servicios">
+<h2>Servicios</h2>
+<ul>
+<li>Diseño web responsivo</li>
+<li>Dominio y hosting</li>
+<li>Optimización SEO</li>
+<li>Integración con WhatsApp</li>
+</ul>
+</section>
+<section class="animate" id="planes">
+<h2>Planes</h2>
+<div class="pricing">
+<div class="plan">
+<h3>Básico</h3>
+<ul><li>1 sección</li><li>Diseño personalizado</li><li>Formulario de contacto</li></ul>
+</div>
+<div class="plan">
+<h3>Profesional</h3>
+<ul><li>Hasta 5 secciones</li><li>SEO básico</li><li>Portafolio integrado</li></ul>
+</div>
+<div class="plan">
+<h3>Premium</h3>
+<ul><li>Blog y portafolio</li><li>Soporte continuo</li><li>Optimización avanzada</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="animate" id="testimonios">
+<h2>Testimonios</h2>
+<div class="testimonial-grid">
+<div class="testimonial animate">
+<img alt="Cliente 1" src="https://via.placeholder.com/80"/>
+<p>“Excelente servicio. Me encantó mi sitio web.”</p>
+<strong>– Scofield Consulting</strong>
+</div>
+<div class="testimonial animate">
+<img alt="Cliente 2" src="https://via.placeholder.com/80"/>
+<p>“Profesionalismo total. Súper recomendados.”</p>
+<strong>– Carlos Pérez</strong>
+</div>
+</div>
+<a class="btn" href="proyectos.html">Ver más proyectos</a></section>
+<section class="animate" id="contacto">
+<h2>Contáctanos</h2>
+<p>Escríbenos por WhatsApp para iniciar tu proyecto:</p>
+<a class="whatsapp-button" href="https://wa.me/17865619679" target="_blank">Hablar por WhatsApp</a>
+</section>
+</main>
+<footer>
+<p>© 2025 MELLO DESIGN. Todos los derechos reservados.</p>
+</footer>
+<a class="whatsapp-float" href="https://wa.me/17865619679" target="_blank">
+<img alt="WhatsApp" src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png"/>
+</a>
+<a class="email-float" href="mailto:mello.design@example.com" title="Enviar correo">
+<img alt="Email" src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"/>
+</a>
+<div class="dark-toggle">
+<label>
+<input id="darkSwitch" type="checkbox"/>
+      Modo oscuro
+    </label>
+</div>
+<script>
+    const animElements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    animElements.forEach(el => observer.observe(el));
+
+    const switchToggle = document.getElementById('darkSwitch');
+    switchToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
